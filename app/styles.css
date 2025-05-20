@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5a4d0, #f86fc1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-shapes {
+  position: absolute;
+  z-index: 0;
+}
+
+.circle1, .circle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4eb5, #ff0099);
+}

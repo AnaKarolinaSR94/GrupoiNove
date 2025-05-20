@@ -65,4 +65,41 @@ body {
   color: #333;
   font-weight: bold;
   margin-bottom: 5px;
+} .login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  color: #7a00a3;
+  font-weight: bold;
+  outline: none;
+}
+
+.login-box input::placeholder {
+  color: #9c6bdb;
+  font-weight: normal;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7ecb;
+  border: none;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-box button:hover {
+  background: #ff4eb5;
+}
+
+.login-box .login-label {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
 }

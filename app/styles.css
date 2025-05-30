@@ -47,7 +47,7 @@ body {
   background: linear-gradient(135deg, #fbd5ef, #f26db3);
   border-radius: 20px;
   padding: 40px;
-  width: 350px;
+  width: 450px;
   box-shadow: 0 0 30px rgba(255, 0, 128, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(15px);
@@ -56,8 +56,9 @@ body {
 .caixa-login h2 {
   text-align: center;
   color: #e6007e;
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .caixa-login label {
@@ -73,23 +74,23 @@ body {
   border: none;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.6);
-  color: #7a00a3;
+  color: black;
   font-weight: bold;
   outline: none;
 }
 
 .caixa-login input::placeholder {
-  color: #9c6bdb;
+  color: gray;
   font-weight: normal;
 }
 
 .caixa-login button {
   width: 100%;
   padding: 12px;
-  background: #ff7ecb;
+  background: #f86fc1;
   border: none;
   border-radius: 25px;
-  color: #000;
+  color: black;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
@@ -100,7 +101,8 @@ body {
 }
 
 .caixa-login .titulo-login {
-  color: #333;
+  color: black;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 15px;
+  text-align: centet;
 }

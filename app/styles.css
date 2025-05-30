@@ -14,18 +14,18 @@ body {
   overflow: hidden;
 }
 
-.background-shapes {
+.formas-fundo {
   position: absolute;
   z-index: 0;
 }
 
-.circle1, .circle2 {
+.circulo1, .circulo2 {
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(135deg, #ff4eb5, #ff0099);
 }
 
-.circle1 {
+.circulo1 {
   width: 500px;
   height: 500px;
   top: -100px;
@@ -33,7 +33,7 @@ body {
   opacity: 0.4;
 }
 
-.circle2 {
+.circulo2 {
   width: 400px;
   height: 400px;
   bottom: -100px;
@@ -41,7 +41,7 @@ body {
   opacity: 0.5;
 }
 
-.login-box {
+.caixa-login {
   position: relative;
   z-index: 1;
   background: linear-gradient(135deg, #fbd5ef, #f26db3);
@@ -53,19 +53,20 @@ body {
   backdrop-filter: blur(15px);
 }
 
-.login-box h2 {
+.caixa-login h2 {
   text-align: center;
   color: #e6007e;
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-.login-box label {
+.caixa-login label {
   display: block;
   color: #333;
   font-weight: bold;
   margin-bottom: 5px;
-} .login-box input {
+  
+} .caixa-login input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -77,12 +78,12 @@ body {
   outline: none;
 }
 
-.login-box input::placeholder {
+.caixa-login input::placeholder {
   color: #9c6bdb;
   font-weight: normal;
 }
 
-.login-box button {
+.caixa-login button {
   width: 100%;
   padding: 12px;
   background: #ff7ecb;
@@ -94,11 +95,11 @@ body {
   transition: background 0.3s;
 }
 
-.login-box button:hover {
+.caixa-login button:hover {
   background: #ff4eb5;
 }
 
-.login-box .login-label {
+.caixa-login .titulo-login {
   color: #333;
   margin-bottom: 10px;
   font-size: 18px;

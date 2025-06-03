@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recepção - Gestão de Pacientes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f5a4d0, #f86fc1);
+      color: black;
+    }
+    header {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: black;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      font-size: 14px;
+    }
+    .small-input {
+      width: 200px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #f06292;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button.small {
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>Recepção - Gestão de Pacientes</header>
+  <div class="container">
+<section>
+      <h2>Consulta de CPF</h2>
+      <input type="text" class="small-input" placeholder="Digite o CPF">
+      <button class="small">Consultar</button>
+    </section>
+
+<section>
+      <h2>Cadastro de Nova Paciente</h2>
+      <label>Número do Cartão SUS</label>
+      <input type="text">
+      <label>Nome Completo</label>
+      <input type="text">
+      <label>Nome da Mãe</label>
+      <input type="text">
+      <label>Nome Social</label>
+      <input type="text">
+      <label>CPF</label>
+      <input type="text">
+      <label>Nacionalidade</label>
+      <input type="text">
+      <label>Data de Nascimento</label>
+      <input type="date">
+      <label>Idade</label>
+      <input type="number">
+      <label>Raça/Cor</label>
+      <select>
+        <option>Branca</option>
+        <option>Preta</option>
+        <option>Parda</option>
+        <option>Amarela</option>
+        <option>Indígena</option>
+        <option>Outra etnia</option>
+      </select>
+      <label>Qual outra etnia?</label>
+      <input type="text">
+      <h3>Dados de Residência</h3>
+      <label>Logradouro</label>
+      <input type="text">
+      <label>Número</label>
+      <input type="text">
+      <label>Complemento</label>
+      <input type="text">
+      <label>Bairro</label>
+      <input type="text">
+      <label>UF</label>
+      <select>
+      <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+      <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+      <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+      <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+      <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+      <option>SE</option><option>TO</option>
+      </select>
+      <label>Código do Município</label>
+      <input type="text">
+      <label>Município</label>
+      <input type="text">
+      <label>CEP</label>
+      <input type="text">
+      <label>DDD</label>
+      <input type="text">
+      <label>Telefone</label>
+      <input type="text">
+      <label>O número possui WhatsApp?</label>
+      <select>
+      <option>Sim</option>
+      <option>Não</option>
+      </select>
+      <label>Ponto de Referência</label>
+      <input type="text">
+      <label>Escolaridade</label>
+      <select>
+        <option>Analfabeta</option>
+        <option>Ensino Fundamental Incompleto</option>
+        <option>Ensino Fundamental Completo</option>
+        <option>Ensino Médio Completo</option>
+        <option>Ensino Superior</option>
+      </select>
+      <button>Cadastrar Paciente</button>
+
+    <div class="section-divider"></div> <h2>Cadastro de Nova Anamnese</h2>
+      <h3>Informações da Unidade de Saúde</h3>
+      <label>UF</label>
+      <select>
+      <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+      <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+      <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+      <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+      <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+      <option>SE</option><option>TO</option>
+      </select>
+      <label>CNES da Unidade</label>
+      <input type="text">
+      <label>Número do Protocolo (SISCAN)</label>
+      <input type="text">
+      <label>Unidade de Saúde</label>
+      <input type="text">
+      <label>Município</label>
+      <input type="text">
+      <label>Prontuário</label>
+      <input type="text">
+    </section>
+
+    <section>
+      <h2>Dados da Anamnese</h2>
+      <label>Motivo do Exame</label>
+      <select>
+        <option>Rastreamento</option>
+        <option>Repetição (exame alterado ASCUS/baixo grau)</option>
+        <option>Seguimento (pós diagnóstico colposcópico/tratamento)</option>
+      </select>
+      <label>Fez exame preventivo (Papanicolau) alguma vez?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Se sim, quando foi o último exame? (ano)</label>
+      <input type="text">
+      <label>Usa DIU?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Está grávida?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Usa pílula anticoncepcional?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Usa hormônio para menopausa?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Já fez radioterapia?</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe</option>
+      </select>
+      <label>Data da última menstruação</label>
+      <input type="date">
+      <br>
+      <br>
+      <select>
+        <option></option>
+        <option>Não sabe / não lembra</option>
+      </select>
+      <label>Teve algum sangramento após relações sexuais? (não considerar a primeira relação sexual da vida)</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe / não lembra</option>
+      </select>
+      <label>Tem ou teve algum sangramento após a menopausa? (Não considerar o(s) sangramento(s) na vigência de reposição hormonal)</label>
+      <select>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sabe / não lembra</option>
+        <option>Não está na menopausa</option>
+      </select>
+      <button class="small">Salvar Anamnese</button>
+    </section>
+  </div>
+</body>
+</html>

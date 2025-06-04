@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Área da Paciente</title>
+  <link rel="stylesheet" href="paciente.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="formas-fundo">
+    <div class="circulo1"></div>
+    <div class="circulo2"></div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="saudacao-usuario">
+        <h1>Olá, Kylie Minogue</h1>
+      </div>
+      <button class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    </header>
+
+    <section class="exam-status">
+      <div class="exam-card">
+        <h2>Último exame realizado</h2>
+        <div class="exam-info">
+          <i class="fas fa-calendar-check"></i>
+          <span class="exam-date">15/03/2025</span>
+        </div>
+      </div>
+      <div class="exam-card overdue-card">
+        <h2>Próximo exame</h2>
+        <div class="exam-info">
+          <i class="fas fa-calendar-times"></i>
+          <span class="exam-date overdue">15/03/2026</span>
+        </div>
+        <button class="btn-agendar"><i class="fas fa-edit"></i> Agendar exame</button>
+      </div>
+    </section>
+
+    <section class="historico">
+      <h2>Histórico de exames</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Tipo de exame</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15/03/2025</td>
+            <td></td>
+            <td><button class="btn-PDF"><i class="fas fa-file-pdf"></i> PDF</button></td>
+          </tr>
+          <tr>
+            <td>20/04/2024</td>
+            <td></td>
+            <td><button class="btn-PDF"><i class="fas fa-file-pdf"></i> PDF</button></td>
+          </tr>
+          <tr>
+            <td>25/04/2023</td>
+            <td></td>
+            <td><button class="btn-PDF"><i class="fas fa-file-pdf"></i> PDF</button></td>
+          </tr>
+          <tr>
+            <td>15/04/2022</td>
+            <td></td>
+            <td><button class="btn-PDF"><i class="fas fa-file-pdf"></i> PDF</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -7,10 +7,16 @@
   body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #f5a4d0, #f86fc1);
-    color: #333;
+    color: black;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .formas-fundo {
@@ -43,8 +49,7 @@
   }
   
   .container {
-    position: relative;
-    z-index: 1;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;

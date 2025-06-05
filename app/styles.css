@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   height: 100vh;
-  background: linear-gradient(135deg, #f5a4d0, #f86fc1);
+  background: rgb(255, 234, 246);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,22 +87,22 @@ body {
 .caixa-login button {
   width: 100%;
   padding: 12px;
-  background: #f86fc1;
+  background: #f06292;
   border: none;
   border-radius: 25px;
-  color: black;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .caixa-login button:hover {
-  background: #ff4eb5;
+  background: rgb(240, 136, 193);
 }
 
 .caixa-login .titulo-login {
   color: black;
   margin-bottom: 10px;
   font-size: 15px;
-  text-align: centet;
+  text-align: center;
 }

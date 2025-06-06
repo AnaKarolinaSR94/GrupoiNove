@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #f5a4d0, #f86fc1);
+    background: rgb(255, 234, 246);
     color: black;
     min-height: 100vh;
     overflow-x: hidden;
@@ -73,8 +73,8 @@
   }
   
   .btn-sair {
-    background: #ff4eb5;
-    color: #000;
+    background: #f06292;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 25px;
@@ -84,8 +84,8 @@
   }
   
   .btn-sair:hover {
-    background: white;
-    color: black;
+    background: rgb(240, 136, 193);
+    color: white;
   }
   
   .exam-status {
@@ -118,23 +118,21 @@
   
   .exam-info i {
     margin-right: 10px;
-    color: #e6007e;
+    color: #f06292;
   }
   
   .exam-date {
-    font-weight: bold;
     font-size: 20px;
     color: black;
   }
   
   .overdue {
     color: black;
-    font-weight: bold;
   }
   
   .btn-agendar {
-    background: #ff4eb5;
-    color: #000;
+    background: #f06292;
+    color: white;
     border: none;
     padding: 10px 18px;
     border-radius: 25px;
@@ -144,8 +142,8 @@
   }
   
   .btn-agendar:hover {
-    background: white;
-    color: black;
+    background: rgb(240, 136, 193);
+    color: white;
   }
   
   .historico {

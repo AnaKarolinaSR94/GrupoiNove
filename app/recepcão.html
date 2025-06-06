@@ -5,110 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recepção (Gestão de Pacientes)</title>
   <style>
-  body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5a4d0, #f86fc1);
-      color: black;
+  
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgb(255, 234, 246);
+    overflow-x: hidden;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     }
-
-  .formas-fundo {
+    .formas-fundo {
     position: absolute;
     z-index: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  .circulo1, .circulo2 {
-    position: absolute;
+    }
+    .circulo1, .circulo2 {
+    position: fixed;
     border-radius: 50%;
     background: linear-gradient(135deg, #ff4eb5, #ff0099);
-  }
-  
-  .circulo1 {
+    z-index: 0;
+    }
+    .circulo1 {
     width: 600px;
     height: 600px;
     top: -150px;
     left: -150px;
     opacity: 0.3;
-  }
-  
-  .circulo2 {
+    }
+    .circulo2 {
     width: 500px;
     height: 500px;
     bottom: -150px;
     right: -150px;
     opacity: 0.4;
-  }
-    header {
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      color: black;
     }
     .container {
     position: relative;
     z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 700px;
+    margin: 40px;
     padding: 40px 20px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     backdrop-filter: blur(12px);
     box-shadow: 0 0 30px rgba(255, 0, 128, 0.2);
     }
+    .container h1 {
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 32px;
+    }
+    .container h3.subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 20px;
+    }
     section {
-      margin-bottom: 40px;
+    margin-bottom: 40px;
     }
     h2 {
-      color: black;
-      margin-bottom: 10px;
+    color: black;
+    margin-bottom: 10px;
     }
     label {
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
-      font-weight: 500;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
     }
     input, select, textarea {
-      width: 100%;
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
-      background: rgba(255, 255, 255, 0.8);
-      color: #000;
-      font-size: 14px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    font-size: 14px;
+    box-shadow: 0 0 8px rgba(255, 0, 128, 0.2);
     }
     .small-input {
-      width: 200px;
-      display: inline-block;
-      margin-right: 10px;
+    width: 200px;
+    display: inline-block;
+    margin-right: 10px;
     }
     .checkbox-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     }
     button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 12px;
-      background-color: #f06292;
-      color: white;
-      font-weight: bold;
-      margin-top: 20px;
-      cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f06292;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
     }
-
     button:hover {
-    background: white;
-    color: black;
-  }
+    background: rgb(240, 136, 193);
+    color: white;
+    }
     button.small {
-      padding: 6px 14px;
-      font-size: 14px;
+    padding: 6px 14px;
+    font-size: 14px;
     }
   </style>
 </head>
@@ -117,16 +124,15 @@
     <div class="circulo1"></div>
     <div class="circulo2"></div>
   </div>
-  <header>RECEPÇÃO</header>
-  <header>Gestão de Pacientes</header>
   <div class="container">
-<section>
+    <h1>RECEPÇÃO</h1>
+    <h3 class="subtitle">Gestão de Pacientes</h3>
+  <section>
       <h2>Consulta de CPF</h2>
       <input type="text" class="small-input" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
       <button class="small">Consultar</button>
     </section>
-
-<section>
+  <section>
       <h2>Cadastro de Nova Paciente</h2>
       <label>Número do Cartão SUS</label>
       <input type="text" id="campoNumeros" maxlength="15" onkeypress="return /^[0-9]$/.test(event.key)">
@@ -199,8 +205,8 @@
         <option>Ensino Superior</option>
       </select>
       <button>Cadastrar Paciente</button>
-
-    <div class="section-divider"></div> <h2>Cadastro de Nova Anamnese</h2>
+    <div class="section-divider"></div> 
+    <h2>Cadastro de Nova Anamnese</h2>
       <h3>Informações da Unidade de Saúde</h3>
       <label>UF</label>
       <select>
@@ -222,7 +228,6 @@
       <label>Prontuário</label>
       <input type="text">
     </section>
-
     <section>
       <h2>Dados da Anamnese</h2>
       <label>Motivo do Exame</label>

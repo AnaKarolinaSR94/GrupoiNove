@@ -130,7 +130,7 @@
   <section>
       <h2>Consulta de CPF</h2>
       <input type="text" name="cpf" class="small-input" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
-      <button class="small">Consultar</button>
+      <button type="submit" class="small">Consultar</button>
     </section>
   <section>
       <h2>Cadastro de Nova Paciente</h2>
@@ -141,7 +141,7 @@
       <label>Nome da Mãe</label>
       <input type="text" name="nome_mae">
       <label>Nome Social</label>
-      <input type="text">
+      <input type="text" name="nome_social">
       <label>CPF</label>
       <input type="text" name="cpf" id="campoNumeros" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)">
       <label>Nacionalidade</label>
@@ -151,7 +151,7 @@
       <label>Idade</label>
       <input type="number" name="idade" id="campoNumeros" maxlength="3" onkeypress="return /^[0-9]$/.test(event.key)">
       <label>Raça/Cor</label>
-      <select>
+      <select name="raca_cor">
         <option>Branca</option>
         <option>Preta</option>
         <option>Parda</option>
@@ -160,14 +160,14 @@
         <option>Outra etnia</option>
       </select>
       <label>Qual outra etnia?</label>
-      <input type="text">
+      <input type="text" name="outra_etnia">
       <h3>Dados de Residência</h3>
       <label>Logradouro</label>
       <input type="text" name="logradouro">
       <label>Número</label>
       <input type="text" name="numero">
       <label>Complemento</label>
-      <input type="text">
+      <input type="text" name=" complemento">
       <label>Bairro</label>
       <input type="text" name="bairro">
       <label>UF</label>
@@ -190,21 +190,21 @@
       <label>Telefone</label>
       <input type="text" name="telefone" id="campoNumeros" maxlength="9" onkeypress="return /^[0-9]$/.test(event.key)">
       <label>O número possui WhatsApp?</label>
-      <select>
+      <select name="whatsapp">
       <option>Sim</option>
       <option>Não</option>
       </select>
       <label>Ponto de Referência</label>
-      <input type="text">
+      <input type="text" name="ponto_referencia">
       <label>Escolaridade</label>
-      <select>
+      <select name="escolaridade">
         <option>Analfabeta</option>
         <option>Ensino Fundamental Incompleto</option>
         <option>Ensino Fundamental Completo</option>
         <option>Ensino Médio Completo</option>
         <option>Ensino Superior</option>
       </select>
-      <button>Cadastrar Paciente</button>
+      <button type="submit">Cadastrar Paciente</button>
     <div class="section-divider"></div> 
     <h2>Cadastro de Nova Anamnese</h2>
       <h3>Informações da Unidade de Saúde</h3>
@@ -218,84 +218,83 @@
       <option>SE</option><option>TO</option>
       </select>
       <label>CNES da Unidade</label>
-      <input type="text" id="campoNumeros" maxlength="7" onkeypress="return /^[0-9]$/.test(event.key)">
+      <input type="text" name="cnes_ubs" id="campoNumeros" maxlength="7" onkeypress="return /^[0-9]$/.test(event.key)">
       <label>Número do Protocolo (SISCAN)</label>
-      <input type="text">
+      <input type="text" name="protocolo_siscan">
       <label>Unidade de Saúde</label>
-      <input type="text">
+      <input type="text" name="unidade_saude">
       <label>Município</label>
-      <input type="text">
+      <input type="text" name="municipio">
       <label>Prontuário</label>
-      <input type="text">
+      <input type="text" name="id_prontuario">
     </section>
     <section>
       <h2>Dados da Anamnese</h2>
       <label>Motivo do Exame</label>
-      <select>
+      <select name="motivo_exame">
         <option>Rastreamento</option>
         <option>Repetição (exame alterado ASCUS/baixo grau)</option>
         <option>Seguimento (pós diagnóstico colposcópico/tratamento)</option>
       </select>
       <label>Fez exame preventivo (Papanicolau) alguma vez?</label>
-      <select>
+      <select name="fez_preventivo">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Se sim, quando foi o último exame? (ano)</label>
-      <input type="text" id="campoNumeros" maxlength="4" onkeypress="return /^[0-9]$/.test(event.key)">
+      <input type="number" name="ano_ultimo_exame" id="campoNumeros" maxlength="4" onkeypress="return /^[0-9]$/.test(event.key)">
       <label>Usa DIU?</label>
-      <select>
+      <select name="usa_diu">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Está grávida?</label>
-      <select>
+      <select name="esta_gravida">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Usa pílula anticoncepcional?</label>
-      <select>
+      <select name="usa_ac">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Usa hormônio para menopausa?</label>
-      <select>
+      <select name="usa_hormonio">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Já fez radioterapia?</label>
-      <select>
+      <select name="fez_radio">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Data da última menstruação</label>
-      <input type="date">
+      <input type="date" name"ultima_menstruacao">
       <br>
       <br>
-      <select>
-        <option></option>
-        <option>Não sabe / não lembra</option>
+      <select name="nao_lembra">
+      <option>Não sabe / não lembra</option>
       </select>
       <label>Teve algum sangramento após relações sexuais? (não considerar a primeira relação sexual da vida)</label>
-      <select>
+      <select name="sangramento_relacao">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe / não lembra</option>
       </select>
       <label>Tem ou teve algum sangramento após a menopausa? (Não considerar o(s) sangramento(s) na vigência de reposição hormonal)</label>
-      <select>
+      <select name="sangramento_menopausa">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe / não lembra</option>
         <option>Não está na menopausa</option>
       </select>
-      <button class="small">Salvar Anamnese</button>
+      <button type="submit" class="small">Salvar Anamnese</button>
     </section>
   </div>
 </body>

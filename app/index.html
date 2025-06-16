@@ -15,8 +15,15 @@
   <div class="caixa-login">
     <h2>SEJA BEM-VINDO</h2>
     <div class="titulo-login">AUTENTICAÇÃO DE USUÁRIO</div>
-    <input type="text" placeholder="USUÁRIO">
-    <input type="password" placeholder="SENHA">
+    <input type="text" name="cpf" placeholder="CPF DO USUÁRIO">
+    <input type="password" name="senha" placeholder="SENHA">
+    <label>Tipo de usuário</label>
+    <select name=" tipo_usuario">
+    <option value="">Selecione...</option>
+    <option value="paciente">Paciente</option>
+    <option value="administrativo">Administrativo</option>
+    <option value="profissional_saude">Profissional da saúde</option>
+    <option value="gestor">Gestor</option>
     <button type="submit">ENTRAR</button>
   </div>
 

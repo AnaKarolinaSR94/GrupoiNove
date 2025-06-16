@@ -147,65 +147,65 @@
     <section>
       <h2>Consulta de CPF</h2>
       <label for="cpf">Digite o CPF</label>
-      <input type="text" class="small-input" id="cpf" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
-      <button class="small">Consultar</button>
+      <input type="text" name="cpf" class="small-input" id="cpf" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
+      <button type="submit" class="small">Consultar</button>
     </section>
     <section>
       <h2>Dados da Anamnese</h2>
       <label>Motivo do Exame</label>
-      <select>
+      <select name="motivo_exame">
         <option>Rastreamento</option>
         <option>Repetição (exame alterado ASCUS/baixo grau)</option>
         <option>Seguimento (pós diagnóstico colposcópico/tratamento)</option>
       </select>
       <label>Fez exame preventivo (Papanicolau) alguma vez?</label>
-      <select>
+      <select name=" fez_preventivo">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Se sim, quando foi o último exame? (ano)</label>
-      <input type="text">
+      <input type="number" name="ano_ultimo_exame">
       <label>Usa DIU?</label>
-      <select>
+      <select name="usa_diu">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Está grávida?</label>
-      <select>
+      <select name="esta_gravida">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Usa pílula anticoncepcional?</label>
-      <select>
+      <select name="usa_ac">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Usa hormônio para menopausa?</label>
-      <select>
+      <select name="usa_hormonio">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Já fez radioterapia?</label>
-      <select>
+      <select name="fez_radio">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe</option>
       </select>
       <label>Data da última menstruação</label>
-      <input type="date">
+      <input type="date" name="ultima_menstruacao">
       <label>Teve algum sangramento após relações sexuais?<br><span style="font-size:0.9em; color:#555;">(não considerar a primeira relação sexual da vida)</span></label>
-      <select>
+      <select name="sangramento_relacao">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe / não lembra</option>
       </select>
       <label>Teve sangramento após a menopausa?<br><span style="font-size:0.9em; color:#555;">(Não considerar sangramentos durante reposição hormonal)</span></label>
-      <select>
+      <select name="sangramento_menopausa">
         <option>Sim</option>
         <option>Não</option>
         <option>Não sabe / não lembra</option>
@@ -220,7 +220,7 @@
 
   <div class="checkbox-option">
     <label for="normal">Normal</label>
-    <input type="checkbox" id="normal">
+    <input type="checkbox" id="normal" >
   </div>
 
   <div class="checkbox-option">
@@ -249,10 +249,10 @@
       </div>
 
       <label for="datacoleta">Data da Coleta</label>
-      <input type="date" id="datacoleta">
+      <input type="date" name="data_coleta" id="datacoleta">
 
       <label for="responsavel">Assinatura do responsável</label>
-      <input type="text" id="responsavel">
+      <input type="text" name="responsavel" id="responsavel">
 
       <div class="note">
         <strong>NOTA:</strong> Na presença de colo alterado com lesão sugestiva de câncer, encaminhar para colposcopia imediatamente.

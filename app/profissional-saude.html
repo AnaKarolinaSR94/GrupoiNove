@@ -116,10 +116,10 @@
     display: inline-block;
     margin-right: 10px;
     }
-    .checkbox-group {
+    .select-group {
     margin-top: 15px;
     }
-    .checkbox-group input {
+    .select-group input {
     margin-right: 8px;
     accent-color: #ff00b7;
     }
@@ -215,38 +215,25 @@
     </section>
     <form>
       <h2>Exame Clínico</h2>
-      <div class="checkbox-group">
-  <strong>Inspeção do Colo</strong>
-
-  <div class="checkbox-option">
-    <label for="normal">Normal</label>
-    <input type="checkbox" id="normal" >
-  </div>
-
-  <div class="checkbox-option">
-     <label for="ausente">Ausente</label>
-    <input type="checkbox" id="ausente">
-  </div>
-
-  <div class="checkbox-option">
-    <label for="alterado">Alterado</label>
-    <input type="checkbox" id="alterado">
-  </div>
-
-  <div class="checkbox-option">
-    <label for="naoVisualizado">Colo não visualizado</label>
-    <input type="checkbox" id="naoVisualizado">
-  </div>
+     <div class="select-group">
+  <label for="inspecao_colo"><strong>Inspeção do Colo</strong></label><br>
+  <select name="inspecao_colo" id="inspecao_colo" required>
+    <option value="">Selecione...</option>
+    <option value="normal">Normal</option>
+    <option value="ausente">Ausente</option>
+    <option value="alterado">Alterado</option>
+    <option value="colo_nao_visualizado">Colo não visualizado</option>
+  </select>
 </div>
 
-
-      <div class="checkbox-group">
-        <strong>Sinais de DST?</strong><br>
-        <label for="dstSim">Sim</label>
-        <input type="checkbox" id="dstSim">
-        <label for="dstNao">Não</label>
-        <input type="checkbox" id="dstNao">
-      </div>
+<div class="select-group">
+  <label for="dst"><strong>Sinais de DST?</strong></label><br>
+  <select name="dst" id="dst" required>
+    <option value="">Selecione...</option>
+    <option value="true">Sim</option>
+    <option value="false">Não</option>
+  </select>
+</div>
 
       <label for="datacoleta">Data da Coleta</label>
       <input type="date" name="data_coleta" id="datacoleta">

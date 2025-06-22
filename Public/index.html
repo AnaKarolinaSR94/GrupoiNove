@@ -3,10 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <title>Ficha Rosa- Login</title>
-  <link rel="stylesheet" href="styles.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: rgb(255, 234, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.formas-fundo {
+  position: absolute;
+  z-index: 0;
+}
+
+.circulo1, .circulo2 {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4eb5, #ff0099);
+}
+
+.circulo1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: -100px;
+  opacity: 0.4;
+}
+
+.circulo2 {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.5;
+}
+
+.caixa-login {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, #fbd5ef, #f26db3);
+  border-radius: 20px;
+  padding: 40px;
+  width: 450px;
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.caixa-login h2 {
+  text-align: center;
+  color: #e6007e;
+  font-size: 36px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.caixa-login label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+} .caixa-login input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+  font-weight: bold;
+  outline: none;
+}
+
+.caixa-login input::placeholder {
+  color: gray;
+  font-weight: normal;
+}
+
+.caixa-login button {
+  width: 100%;
+  padding: 12px;
+  background: #f06292;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.caixa-login button:hover {
+  background: rgb(240, 136, 193);
+}
+
+.caixa-login .titulo-login {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.tipo_usuario {
+  color: gray;
+  font-weight: normal;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+</style>
 </head>
 <body>
-
+  
   <div class="formas-fundo">
     <div class="circulo1"></div>
     <div class="circulo2"></div>
@@ -15,16 +136,19 @@
   <div class="caixa-login">
     <h2>SEJA BEM-VINDO</h2>
     <div class="titulo-login">AUTENTICAÇÃO DE USUÁRIO</div>
-    <input type="text" name="cpf" placeholder="CPF DO USUÁRIO">
-    <input type="password" name="senha" placeholder="SENHA">
-    <label>Tipo de usuário</label>
-    <select name=" tipo_usuario">
-    <option value="">Selecione...</option>
-    <option value="paciente">Paciente</option>
-    <option value="administrativo">Administrativo</option>
-    <option value="profissional_saude">Profissional da saúde</option>
-    <option value="gestor">Gestor</option>
-    <button type="submit">ENTRAR</button>
+    <form action="/login" method="POST">
+    <input type="text" placeholder="CPF" name="cpf" required maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)">
+    <input type="password" name="senha" placeholder="SENHA" required>
+    <input type="password" placeholder="SENHA" name="senha" required>
+      <select name="tipo_usuario" class="tipo_usuario" required>
+        <option value="">TIPO DE USUÁRIO</option>
+        <option value="paciente">Paciente</option>
+        <option value="administrativo">Administrativo</option>
+        <option value="profissional_saude">Profissional da Saúde</option>
+        <option value="gestor">Gestor</option>
+      </select>
+      <button type="submit">ENTRAR</button>
+    </form>
   </div>
 
 </body>

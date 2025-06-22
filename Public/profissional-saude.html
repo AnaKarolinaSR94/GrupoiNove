@@ -1,138 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exame Clínico</title>
   <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body {
-    font-family: 'Segoe UI', sans-serif;
-    background: rgb(255, 234, 246);
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: rgb(255, 234, 246);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
     }
+
     .formas-fundo {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .circulo1, .circulo2 {
-    position: fixed;
-    z-index: 0;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff4eb5, #ff0099);
+      position: fixed;
+      z-index: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff4eb5, #ff0099);
     }
+
     .circulo1 {
-    width: 600px;
-    height: 600px;
-    top: -150px;
-    left: -150px;
-    opacity: 0.3;
+      width: 600px;
+      height: 600px;
+      top: -150px;
+      left: -150px;
+      opacity: 0.3;
     }
+
     .circulo2 {
-    width: 500px;
-    height: 500px;
-    bottom: -150px;
-    right: -150px;
-    opacity: 0.4;
+      width: 500px;
+      height: 500px;
+      bottom: -150px;
+      right: -150px;
+      opacity: 0.4;
     }
+
     .main-container {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    box-shadow: 0 4px 22px #a7006e3a;
-    padding: 40px 30px;
-    width: 100%;
-    max-width: 750px;
-    position: relative;
-    z-index: 1;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      box-shadow: 0 4px 22px #a7006e3a;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 750px;
+      position: relative;
+      z-index: 1;
     }
+
     .main-container h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 30px;
+      text-align: center;
+      font-size: 2rem;
+      color: black;
+      margin-bottom: 30px;
     }
+
     section, form {
-    margin-bottom: 40px;
+      margin-bottom: 40px;
     }
+
     h2 {
-    font-size: 1.4rem;
-    color: black;
-    margin-bottom: 20px;
-    text-align: center;
+      color: black;
+      margin-bottom: 10px;
     }
+
     label {
-    color: black;
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 6px;
-    font-weight: bold;
+      color: black;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 500;
     }
+
     input, select {
-    width: 100%;
-    padding: 8px 12px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    border: none;
-    box-shadow: 0 1px 4px #ff00b749;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1rem;
+      width: 100%;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: none;
+      box-shadow: 0 1px 4px #ff00b749;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1rem;
     }
+
     button {
-    background: #f06292;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    padding: 11px 0;
-    width: 100%;
-    margin-top: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px #ff00b755;
-    transition: background 0.18s;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #f06292;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
     }
+
     button.small {
-    padding: 6px 14px;
-    font-size: 14px;
+      padding: 6px 14px;
+      font-size: 14px;
     }
+
     button:hover {
-    background: rgb(240, 136, 193);
+      background: rgb(240, 136, 193);
     }
+
     .small-input {
-    width: 200px;
-    display: inline-block;
-    margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+      margin-right: 10px;
     }
-    .select-group {
-    margin-top: 15px;
+
+    .checkbox-group {
+      margin-top: 15px;
     }
-    .select-group input {
-    margin-right: 8px;
-    accent-color: #ff00b7;
+
+    .checkbox-group input {
+      margin-right: 8px;
+      accent-color: #ff00b7;
     }
+
     .note {
-    font-size: 0.97rem;
-    color: black;
-    margin-top: 10px;
-    background: none;
+      font-size: 0.97rem;
+      color: black;
+      margin-top: 10px;
+      background: none;
     }
+
     @media (max-width: 600px) {
-    .main-container {
-    padding: 20px 16px;
-    }
+      .main-container {
+        padding: 20px 16px;
+      }
     }
   </style>
 </head>
@@ -141,112 +154,135 @@
     <div class="circulo1"></div>
     <div class="circulo2"></div>
   </div>
-
   <div class="main-container">
-    <h1>Exame clínico</h1>
+    <h1>Novo Atendimento</h1>
+
     <section>
       <h2>Consulta de CPF</h2>
-      <label for="cpf">Digite o CPF</label>
-      <input type="text" name="cpf" class="small-input" id="cpf" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
-      <button type="submit" class="small">Consultar</button>
+      <form action="/consultar" method="POST">
+      <input type="text" name="cpf" class="small-input" placeholder="Digite o CPF" id="cpf" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
+      <button class="small" type="submit">Consultar</button>
+      </form>
     </section>
+
     <section>
+    <div class="section-divider">
+    <section>
+    <h2>Cadastro Novo Exame</h2>
+    <form action="/cadastrar-atendimento" method="POST">
+      <h3>Informações da Unidade de Saúde</h3>
+      <label>Protoloco SISCAN</label>
+      <input type="text" name="protocolo_siscan" maxlength="19">
+      <label>CPF</label>
+      <input type="text" name="cpf" id="campoNumeros" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)">
+      <label>Data de Atendimento</label>
+      <input type="date" name="data_abertura">
+      <label>UF da UBS</label>
+      <select name="uf_ubs">
+      <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+      <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+      <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+      <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+      <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+      <option>SE</option><option>TO</option>
+      </select>
+      <label>CNES da Unidade de Saúde</label>
+      <input type="text" name="cnes_ubs" id="campoNumeros" maxlength="7">
+      <label>Unidade de Saúde</label>
+      <input type="text" name="unidade_saude">
+      <label>Município</label>
+      <input type="text" name="municipio_ubs">
+      </div>
+
+    <div>
       <h2>Dados da Anamnese</h2>
       <label>Motivo do Exame</label>
       <select name="motivo_exame">
-        <option>Rastreamento</option>
-        <option>Repetição (exame alterado ASCUS/baixo grau)</option>
-        <option>Seguimento (pós diagnóstico colposcópico/tratamento)</option>
+        <option>rastreamento</option>
+        <option>repetição</option>
+        <option>seguimento</option>
       </select>
-      <label>Fez exame preventivo (Papanicolau) alguma vez?</label>
-      <select name=" fez_preventivo">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+      <label>Fez exame preventivo(Papanicolau) alguma vez?</label>
+      <select name="fez_preventivo">
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Se sim, quando foi o último exame? (ano)</label>
-      <input type="number" name="ano_ultimo_exame">
+      <input type="text" name="ano_ultimo_exame">
       <label>Usa DIU?</label>
       <select name="usa_diu">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Está grávida?</label>
       <select name="esta_gravida">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Usa pílula anticoncepcional?</label>
       <select name="usa_ac">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Usa hormônio para menopausa?</label>
       <select name="usa_hormonio">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Já fez radioterapia?</label>
       <select name="fez_radio">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Data da última menstruação</label>
       <input type="date" name="ultima_menstruacao">
       <label>Teve algum sangramento após relações sexuais?<br><span style="font-size:0.9em; color:#555;">(não considerar a primeira relação sexual da vida)</span></label>
       <select name="sangramento_relacao">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe / não lembra</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
       </select>
       <label>Teve sangramento após a menopausa?<br><span style="font-size:0.9em; color:#555;">(Não considerar sangramentos durante reposição hormonal)</span></label>
       <select name="sangramento_menopausa">
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Não sabe / não lembra</option>
-        <option>Não está na menopausa</option>
+        <option>sim</option>
+        <option>não</option>
+        <option>não sabe</option>
+        <option>não está na menopausa</option>
       </select>
-      <button>Salvar Anamnese</button>
-    </section>
-    <form>
-      <h2>Exame Clínico</h2>
-     <div class="select-group">
-  <label for="inspecao_colo"><strong>Inspeção do Colo</strong></label><br>
-  <select name="inspecao_colo" id="inspecao_colo" required>
-    <option value="">Selecione...</option>
-    <option value="normal">Normal</option>
-    <option value="ausente">Ausente</option>
-    <option value="alterado">Alterado</option>
-    <option value="colo_nao_visualizado">Colo não visualizado</option>
+    </div>
+
+    <div>
+    <h2>Exame Clínico</h2>
+  <label>Inspeção do Colo</label>
+  <select name="inspecao_colo" id="inspecao_colo">
+    <option>Selecione...</option>
+    <option>normal</option>
+    <option>ausente</option>
+    <option>alterado</option>
+    <option>colo não visualizado</option>
   </select>
-</div>
-
-<div class="select-group">
-  <label for="dst"><strong>Sinais de DST?</strong></label><br>
-  <select name="dst" id="dst" required>
-    <option value="">Selecione...</option>
-    <option value="true">Sim</option>
-    <option value="false">Não</option>
+  <label>Sinais sugestivos de doenças sexualmente transmissíveis?</label>
+  <select name="dst">
+    <option>sim</option>
+    <option>não</option>
   </select>
-</div>
+    <label for="datacoleta">Data da Coleta</label>
+    <input type="date" id="datacoleta">
+    <label for="responsavel">Assinatura do responsável</label>
+    <input type="text" id="responsavel">
+    </div>
 
-      <label for="datacoleta">Data da Coleta</label>
-      <input type="date" name="data_coleta" id="datacoleta">
-
-      <label for="responsavel">Assinatura do responsável</label>
-      <input type="text" name="responsavel" id="responsavel">
-
-      <div class="note">
-        <strong>NOTA:</strong> Na presença de colo alterado com lesão sugestiva de câncer, encaminhar para colposcopia imediatamente.
-      </div>
-
-      <button type="submit">Finalizar</button>
+    <div class="note">
+    <strong>NOTA:</strong> Na presença de colo alterado com lesão sugestiva de câncer, encaminhar para colposcopia imediatamente.
+    </div>
+    <button type="submit">Cadastrar Exame</button>
     </form>
-  </div>
+    </section>
 </body>
 </html>

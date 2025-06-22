@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recepção (Gestão de Pacientes)</title>
+  <style>
+  
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgb(255, 234, 246);
+    overflow-x: hidden;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    .formas-fundo {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    }
+    .circulo1, .circulo2 {
+    position: fixed;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4eb5, #ff0099);
+    z-index: 0;
+    }
+    .circulo1 {
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    left: -150px;
+    opacity: 0.3;
+    }
+    .circulo2 {
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    right: -150px;
+    opacity: 0.4;
+    }
+    .container {
+    position: relative;
+    z-index: 1;
+    width: 700px;
+    margin: 40px;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(255, 0, 128, 0.2);
+    }
+    .container h1 {
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 32px;
+    }
+    .container h3.subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 20px;
+    }
+    section {
+    margin-bottom: 40px;
+    }
+    h2 {
+    color: black;
+    margin-bottom: 10px;
+    }
+    label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    }
+    input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    font-size: 14px;
+    box-shadow: 0 0 8px rgba(255, 0, 128, 0.2);
+    }
+    .small-input {
+    width: 200px;
+    display: inline-block;
+    margin-right: 10px;
+    }
+    .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+    button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f06292;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    }
+    button:hover {
+    background: rgb(240, 136, 193);
+    color: white;
+    }
+    button.small {
+    padding: 6px 14px;
+    font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="formas-fundo">
+    <div class="circulo1"></div>
+    <div class="circulo2"></div>
+  </div>
+  <div class="container">
+    <h1>RECEPÇÃO</h1>
+    <h3 class="subtitle">Gestão de Pacientes</h3>
+    
+  <section>
+    <h2>Consulta de CPF</h2>
+    <form action="/consultar" method="POST">
+    <input type="text" name="cpf" class="small-input" placeholder="Digite o CPF" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)"/>
+    <button type="submit" class="small">Consultar</button>
+    </form>
+    </section>
+    
+  <section>
+      <h2>Cadastro de Nova Paciente</h2>
+      <form action="/cadastrar-paciente" method="POST">
+      <label>Número do Cartão SUS</label>
+      <input type="text" name="cartao_sus" id="campoNumeros" maxlength="15" onkeypress="return /^[0-9]$/.test(event.key)">
+      <label>Nome Completo</label>
+      <input type="text" name="nome" required>
+      <label>Nome da Mãe</label>
+      <input type="text" name="nome_mae" required>
+      <label>Nome Social</label>
+      <input type="text" name="nome_social">
+      <label>CPF</label>
+      <input type="text" name="cpf" id="campoNumeros" maxlength="11" onkeypress="return /^[0-9]$/.test(event.key)" required>
+      <label>Nacionalidade</label>
+      <input type="text" name="nacionalidade" required>
+      <label>Data de Nascimento</label>
+      <input type="date" name="data_nascimento" required>
+      <label>Idade</label>
+      <input type="text" name="idade" id="campoNumeros" maxlength="3" onkeypress="return /^[0-9]$/.test(event.key)">
+      <label>Raça/Cor</label>
+      <select name="raca" required>
+        <option>branca</option>
+        <option>preta</option>
+        <option>parda</option>
+        <option>amarela</option>
+        <option>indígena</option>
+        <option>outra etnia</option>
+      </select>
+      <label>Qual outra etnia?</label>
+      <input type="text" name="outra_etnia">
+      <h3>Dados de Residência</h3>
+      <label>Logradouro</label>
+      <input type="text" name="logradouro">
+      <label>Número</label>
+      <input type="text" name="numero">
+      <label>Complemento</label>
+      <input type="text" name="complemento">
+      <label>Bairro</label>
+      <input type="text" name="bairro">
+      <label>UF</label>
+      <select name="uf">
+      <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option>
+      <option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option>
+      <option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option>
+      <option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+      <option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option>
+      <option>SE</option><option>TO</option>
+      </select>
+      <label>Código do Município</label>
+      <input type="text" name="codigo_municipio">
+      <label>Município</label>
+      <input type="text" name="municipio" required>
+      <label>CEP</label>
+      <input type="text" name="cep" id="campoNumeros" maxlength="8" onkeypress="return /^[0-9]$/.test(event.key)" required>
+      <label>DDD</label>
+      <input type="text" name="ddd" required>
+      <label>Telefone</label>
+      <input type="text" name="telefone" id="campoNumeros" maxlength="9" onkeypress="return /^[0-9]$/.test(event.key)" required>
+      <label>O número possui WhatsApp?</label>
+      <select name="whatsapp">
+      <option>sim</option>
+      <option>não</option>
+      </select>
+      <label>Ponto de Referência</label>
+      <input type="text" name="ponto_referencia">
+      <label>Escolaridade</label>
+      <select name="escolaridade">
+        <option>analfabeta</option>
+        <option>ensino fundamental incompleto</option>
+        <option>ensino fundamental completo</option>
+        <option>ensino médio completo</option>
+        <option>ensino superior</option>
+      </select>
+      <button type="submit">Cadastrar Paciente</button>
+    </form>
+    </section>
+</body>
+</html>
